@@ -44,6 +44,20 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like_image" translatesAutoresizingMaskIntoConstraints="NO" id="se5-Zd-hvb">
+                                                <rect key="frame" x="25" y="25" width="158" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="4yl-mT-mHI"/>
+                                                    <constraint firstAttribute="width" constant="158" id="BIr-lR-K2f"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nope_image" translatesAutoresizingMaskIntoConstraints="NO" id="aeX-yG-0Db">
+                                                <rect key="frame" x="168" y="25" width="158" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="TNo-Ue-XhT"/>
+                                                    <constraint firstAttribute="width" constant="158" id="gg7-AK-Tgu"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -54,10 +68,14 @@
                                             <constraint firstItem="TKQ-ZY-ruv" firstAttribute="leading" secondItem="LgJ-C7-HPM" secondAttribute="leading" constant="14" id="8zj-Pf-uSU"/>
                                             <constraint firstItem="Wpw-Mc-TkI" firstAttribute="top" secondItem="LgJ-C7-HPM" secondAttribute="top" id="9Sd-Qk-5CS"/>
                                             <constraint firstItem="Wpw-Mc-TkI" firstAttribute="leading" secondItem="LgJ-C7-HPM" secondAttribute="leading" id="AQf-mH-2qq"/>
+                                            <constraint firstAttribute="trailing" secondItem="aeX-yG-0Db" secondAttribute="trailing" constant="25" id="DME-Dr-fFD"/>
+                                            <constraint firstItem="aeX-yG-0Db" firstAttribute="top" secondItem="LgJ-C7-HPM" secondAttribute="top" constant="25" id="KRj-8n-yig"/>
+                                            <constraint firstItem="se5-Zd-hvb" firstAttribute="leading" secondItem="LgJ-C7-HPM" secondAttribute="leading" constant="25" id="Zw8-Im-PMM"/>
                                             <constraint firstItem="TKQ-ZY-ruv" firstAttribute="top" secondItem="uI7-QJ-Q0A" secondAttribute="bottom" constant="2.5" id="dFk-37-uH1"/>
                                             <constraint firstAttribute="trailing" secondItem="Wpw-Mc-TkI" secondAttribute="trailing" id="dQl-5u-1cS"/>
                                             <constraint firstItem="uI7-QJ-Q0A" firstAttribute="top" secondItem="LgJ-C7-HPM" secondAttribute="top" constant="8" id="fVr-Rd-Kg8"/>
                                             <constraint firstAttribute="bottom" secondItem="Wpw-Mc-TkI" secondAttribute="bottom" id="rma-Cl-Pkz"/>
+                                            <constraint firstItem="se5-Zd-hvb" firstAttribute="top" secondItem="LgJ-C7-HPM" secondAttribute="top" constant="25" id="xd5-1T-24m"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ao8-ro-nbl" userLabel="Buttons">
@@ -113,6 +131,8 @@
                     <connections>
                         <outlet property="cardView" destination="LgJ-C7-HPM" id="c07-9D-POM"/>
                         <outlet property="homeWrapper" destination="ebS-YA-db8" id="TkI-oU-w4Q"/>
+                        <outlet property="likeImage" destination="se5-Zd-hvb" id="TSG-hL-VKh"/>
+                        <outlet property="nopeImage" destination="aeX-yG-0Db" id="5io-Kf-fDh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -146,5 +166,7 @@
         <image name="Super Like" width="51" height="51"/>
         <image name="Swipe Card" width="356" height="507"/>
         <image name="crispeta" width="1080" height="1079"/>
+        <image name="like_image" width="170" height="114"/>
+        <image name="nope_image" width="197" height="130"/>
     </resources>
 </document>
