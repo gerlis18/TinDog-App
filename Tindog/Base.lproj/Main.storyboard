@@ -147,6 +147,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQs-Ru-qaE">
+                                <rect key="frame" x="15" y="30" width="23" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="23" id="UI5-t2-6Lw"/>
+                                    <constraint firstAttribute="height" constant="23" id="yFR-B6-9gg"/>
+                                </constraints>
+                                <state key="normal" image="close_modal"/>
+                                <connections>
+                                    <action selector="close:" destination="Eb5-yP-fEP" eventType="touchUpInside" id="tur-Ba-M06"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="31x-v8-P44">
                                 <rect key="frame" x="50" y="127" width="275" height="413"/>
                                 <subviews>
@@ -203,7 +214,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yFq-rS-SWq">
                                                         <rect key="frame" x="0.0" y="0.0" width="275" height="195"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="hola@tindog.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8EB-1f-ISN">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="hola@tindog.com" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8EB-1f-ISN">
                                                                 <rect key="frame" x="12.5" y="0.0" width="250" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="250" id="AL5-3i-S8P"/>
@@ -213,7 +224,7 @@
                                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KPh-SK-1wo">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KPh-SK-1wo">
                                                                 <rect key="frame" x="12.5" y="65" width="250" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="CPQ-Ub-6uC"/>
@@ -255,6 +266,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="NQs-Ru-qaE" firstAttribute="top" secondItem="tOa-Be-PPB" secondAttribute="top" constant="10" id="3bT-Pk-CJs"/>
+                            <constraint firstItem="NQs-Ru-qaE" firstAttribute="leading" secondItem="tOa-Be-PPB" secondAttribute="leading" constant="15" id="EkJ-NH-4L4"/>
                             <constraint firstItem="31x-v8-P44" firstAttribute="centerX" secondItem="75I-ZM-WBx" secondAttribute="centerX" id="I1G-qX-euf"/>
                             <constraint firstItem="31x-v8-P44" firstAttribute="centerY" secondItem="75I-ZM-WBx" secondAttribute="centerY" id="Mqx-7t-crF"/>
                         </constraints>
@@ -291,6 +304,7 @@
         <image name="Rewind" width="51" height="51"/>
         <image name="Super Like" width="51" height="51"/>
         <image name="Swipe Card" width="356" height="507"/>
+        <image name="close_modal" width="23" height="23"/>
         <image name="crispeta" width="1080" height="1079"/>
         <image name="like_image" width="170" height="114"/>
         <image name="login_btn_bg" width="256" height="65"/>
