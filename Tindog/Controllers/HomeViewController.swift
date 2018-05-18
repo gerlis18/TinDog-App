@@ -28,9 +28,23 @@ class HomeViewController: UIViewController {
         self.navigationItem.titleView = titleView
         let homeCR = UIPanGestureRecognizer(target: self, action: #selector(cardDragged(gestureRecognized:)))
         self.cardView.addGestureRecognizer(homeCR)
-        // Do any additional setup after loading the view.
+        
+        
+        let leftBtn = UIButton(type: .custom)
+        leftBtn.setImage(UIImage(named: "login"), for: .normal)
+        leftBtn.imageView?.contentMode = .scaleAspectFit
+        leftBtn.addTarget(self, action: #selector(goToLogin(sender:)), for: .touchUpInside)
+        
+        let leftBarBtn = UIBarButtonItem(customView: leftBtn)
+        self.navigationItem.leftBarButtonItem = leftBarBtn
     }
 
+    @objc func goToLogin(sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let loginViewController = storyBoard.instantiateViewController(withIdentifier: "loginVC")
+        present(loginViewController, animated: true, completion: nil)
+    }
+    
     @objc func cardDragged(gestureRecognized : UIPanGestureRecognizer) {
         let cardPoint = gestureRecognized.translation(in: view)
         self.cardView.center = CGPoint(x: self.view.bounds.width / 2 + cardPoint.x, y: self.view.bounds.height / 2 + cardPoint.y)
