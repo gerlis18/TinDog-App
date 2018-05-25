@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -22,6 +23,42 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginActionBtn(_ sender: Any) {
+        if (self.emailTextField.text == "" || self.passwordTextField.text == "") {
+            self.showAlert(title: "Error", message: "Alguno de los campos esta vacio")
+        } else {
+            if let email = self.emailTextField.text {
+                if let pass = self.passwordTextField.text {
+                    if self.registerMode {
+                        Auth.auth().createUser(withEmail: email, password: pass) { (user, err) in
+                            if err != nil {
+                                self.showAlert(title: "Error", message: err!.localizedDescription)
+                            } else {
+                                print("usuario registrado")
+                                if let user = user {
+                                    let userData = ["provider": user.providerID, "email": user.email!, "profileImage": "", "displayName": "crispeta"] as [String: Any]
+                                    DataBaseService.instance.createFirebaseDBUser(uid: user.uid, userData: userData)
+                                }
+                            }
+                        }
+                    } else {
+                        Auth.auth().signIn(withEmail: email, password: pass) { (user, err) in
+                            if err != nil {
+                                self.showAlert(title: "Error", message: err!.localizedDescription)
+                            } else {
+                                print("usuario logueado")
+                                self.dismiss(animated: true, completion: nil)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertView, animated: true, completion: nil)
     }
     
     @IBAction func subLoginActionBtn(_ sender: Any) {

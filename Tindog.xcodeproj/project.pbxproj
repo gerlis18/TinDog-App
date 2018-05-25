@@ -17,6 +17,7 @@
 		64C090D920AE605F007B4808 /* UIVIewEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C090D820AE605F007B4808 /* UIVIewEXT.swift */; };
 		64C090DB20AE67F0007B4808 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64C090DA20AE67F0007B4808 /* GoogleService-Info.plist */; };
 		64E6007D20A54297000D91FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E6007C20A54297000D91FA /* HomeViewController.swift */; };
+		64EC334620B7BC8D006CFE81 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC334520B7BC8D006CFE81 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		64C090D820AE605F007B4808 /* UIVIewEXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewEXT.swift; sourceTree = "<group>"; };
 		64C090DA20AE67F0007B4808 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64E6007C20A54297000D91FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		64EC334520B7BC8D006CFE81 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		881652C51F2181957FAE7952 /* Pods-Tindog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tindog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tindog/Pods-Tindog.debug.xcconfig"; sourceTree = "<group>"; };
 		DFD0991F1ADE715162AD99F7 /* Pods_Tindog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tindog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 			children = (
 				64E6007C20A54297000D91FA /* HomeViewController.swift */,
 				64C090D520AE5684007B4808 /* LoginViewController.swift */,
+				64EC334520B7BC8D006CFE81 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64EC334620B7BC8D006CFE81 /* ProfileViewController.swift in Sources */,
 				64C090D620AE5684007B4808 /* LoginViewController.swift in Sources */,
 				64C090D920AE605F007B4808 /* UIVIewEXT.swift in Sources */,
 				6427C19B20A3D30000C79F90 /* AppDelegate.swift in Sources */,

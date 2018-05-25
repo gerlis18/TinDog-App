@@ -222,7 +222,7 @@
                                                                 </constraints>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KPh-SK-1wo">
                                                                 <rect key="frame" x="12.5" y="77.5" width="250" height="50"/>
@@ -232,7 +232,7 @@
                                                                 </constraints>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YL-SL-sEv">
                                                                 <rect key="frame" x="9.5" y="155" width="256" height="65"/>
@@ -319,6 +319,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZX-W4-oBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1757.5999999999999" y="121.88905547226388"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="lkM-s6-IE6">
+            <objects>
+                <viewController storyboardIdentifier="profileVC" id="J2k-A0-3Y8" customClass="ProfileViewController" customModule="Tindog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zOh-hz-GC9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Akn-sh-G4P">
+                                <rect key="frame" x="140" y="318" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cerrar Sesión"/>
+                                <connections>
+                                    <action selector="closeProfileBtn:" destination="J2k-A0-3Y8" eventType="touchUpInside" id="9nr-y2-Bby"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ics-8A-NoG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUJ-Jt-rT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759" y="779"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nm7-yc-gbF">
