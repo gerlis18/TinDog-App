@@ -12,6 +12,9 @@
 		6427C1A020A3D30000C79F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6427C19E20A3D30000C79F90 /* Main.storyboard */; };
 		6427C1A220A3D30200C79F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6427C1A120A3D30200C79F90 /* Assets.xcassets */; };
 		6427C1A520A3D30200C79F90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6427C1A320A3D30200C79F90 /* LaunchScreen.storyboard */; };
+		645D2D5D20CB72A2001A48EB /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645D2D5C20CB72A1001A48EB /* MatchModel.swift */; };
+		64660B8120BF97A9007DDDE2 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64660B8020BF97A9007DDDE2 /* UserModel.swift */; };
+		64B3BDB020CC3D0B00C3130A /* UpdateDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B3BDAF20CC3D0B00C3130A /* UpdateDBService.swift */; };
 		64B5F0B020B21AC7009254EC /* DataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B5F0AF20B21AC7009254EC /* DataBaseService.swift */; };
 		64C090D620AE5684007B4808 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C090D520AE5684007B4808 /* LoginViewController.swift */; };
 		64C090D920AE605F007B4808 /* UIVIewEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C090D820AE605F007B4808 /* UIVIewEXT.swift */; };
@@ -28,6 +31,9 @@
 		6427C1A120A3D30200C79F90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6427C1A420A3D30200C79F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6427C1A620A3D30200C79F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		645D2D5C20CB72A1001A48EB /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
+		64660B8020BF97A9007DDDE2 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		64B3BDAF20CC3D0B00C3130A /* UpdateDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDBService.swift; sourceTree = "<group>"; };
 		64B5F0AF20B21AC7009254EC /* DataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseService.swift; sourceTree = "<group>"; };
 		64C090D520AE5684007B4808 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		64C090D820AE605F007B4808 /* UIVIewEXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewEXT.swift; sourceTree = "<group>"; };
@@ -80,6 +86,7 @@
 		6427C19920A3D30000C79F90 /* Tindog */ = {
 			isa = PBXGroup;
 			children = (
+				64660B7F20BF9798007DDDE2 /* Models */,
 				64B5F0AE20B21A60009254EC /* Services */,
 				64C090D720AE6040007B4808 /* Extensions */,
 				64E6007B20A54239000D91FA /* Controllers */,
@@ -93,10 +100,20 @@
 			path = Tindog;
 			sourceTree = "<group>";
 		};
+		64660B7F20BF9798007DDDE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				64660B8020BF97A9007DDDE2 /* UserModel.swift */,
+				645D2D5C20CB72A1001A48EB /* MatchModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		64B5F0AE20B21A60009254EC /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				64B5F0AF20B21AC7009254EC /* DataBaseService.swift */,
+				64B3BDAF20CC3D0B00C3130A /* UpdateDBService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -207,6 +224,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -215,6 +233,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -249,6 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				64EC334620B7BC8D006CFE81 /* ProfileViewController.swift in Sources */,
+				645D2D5D20CB72A2001A48EB /* MatchModel.swift in Sources */,
+				64B3BDB020CC3D0B00C3130A /* UpdateDBService.swift in Sources */,
+				64660B8120BF97A9007DDDE2 /* UserModel.swift in Sources */,
 				64C090D620AE5684007B4808 /* LoginViewController.swift in Sources */,
 				64C090D920AE605F007B4808 /* UIVIewEXT.swift in Sources */,
 				6427C19B20A3D30000C79F90 /* AppDelegate.swift in Sources */,
